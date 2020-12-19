@@ -1,0 +1,133 @@
+body {
+    padding-bottom: 10px;
+    background: blueviolet;
+  }
+  h1{
+    text-align: center;
+  }
+  #triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 70px solid red;
+  }
+  #oval {
+      width: 200px;
+      height: 150px;
+      background: green;
+      -moz-border-radius: 200px / 100px;
+      -webkit-border-radius: 200px / 100px;
+      border-radius: 100px / 50px;
+  }	
+  	/*if you change the border top you impact the spacing of the eyes  */
+  #triangle-down {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 70px solid red;
+  }
+  #eye{
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    border-radius: 50px;
+    margin: -200px 0px 150px 150px;
+  }
+  #mouth{
+    width: 50px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50px;
+    margin: -125px 0px 150px 150px;
+  }
+  #tooth{
+    width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid black;
+    margin: -168px 0px 0px 160px;
+  }
+  #tooth-2{
+    width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid black;
+    margin: -4px 0px 0px 170px;
+  }
+  #eyeball{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50px;
+    margin: -56px 0px 0px 166px
+  }
+
+  /* Bubbles */
+.bubbles {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    margin-right: 50px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: .50;
+    width: 40px;
+    height: 40px;
+    animation: up 4s infinite;
+  }
+  
+  .bubble-2 {
+    left: 350px;
+    animation: up 2s infinite;
+  }
+  
+  .bubble-3 {
+    left: 750px;
+    opacity: .30;
+    animation: up 5s infinite;
+  }
+  
+  .bubble-4 {
+    left: 1150px;
+    animation: up 6s infinite;
+  }
+  
+  .bubble-5 {
+    left: 50px;
+    animation: up 5s infinite;
+  }
+  
+  .bubble-6 {
+    left: 300px;
+    opacity: .30;
+    animation: up 3s infinite;
+  }
+  
+  .bubble-7 {
+    left: 670px;
+    animation: up 4s infinite;
+  }
+  
+  .bubble-8 {
+    left: 1050px;
+    opacity: .30;
+    animation: up 3s infinite;
+  }
+  /*  */
+  .creature{
+   animation: swim 10s both infinite normal;
+  }
+  
+  @keyframes swim {
+    from{transform: translateX(-175px)}
+    to{transform: translateX(1500px)}
+  }
+  /* Bubbles Animation */
+@keyframes up {
+    100% {
+      transform: translateY(-800px);
+    }
