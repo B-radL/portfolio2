@@ -10,7 +10,7 @@ h2								{ font-family: Georgia, Serif; font-size: 36px; text-align: center;
 #page-wrap						{ background: white; width: 960px; margin: 0 auto; 
 								  padding: 50px 0; }
 /* add back in ../images preface right after url( */
-#slider							{ background: white url(../images/slider-bg.jpg); height: 227px; overflow: hidden;
+#slider							{ background: white url(slider-bg.jpg); height: 227px; overflow: hidden;
 								  position: relative; margin: 50px 0; }
 								  
  /* DEFAULT is for three panels in width, adjust as needed

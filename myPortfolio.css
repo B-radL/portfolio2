@@ -1,0 +1,191 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+	position: relative;
+	width: 451px;
+	height: 451px;
+	margin: 1rem auto;
+	text-transform: uppercase;
+	background: radial-gradient(orchid, slateBlue);
+	color: white;
+	border-radius: 50%;
+}
+
+.char {
+	--i: calc(100% / (var(--char-total) + 1));
+	position: absolute;
+	offset-path: path('M225.5.5c124.3 0 225 100.7 225 225s-100.7 225-225 225S.5 349.8.5 225.5 101.2.5 225.5.5');
+	offset-distance: calc(var(--i) * var(--char-index));
+/* 	offset-anchor: top; FF only */
+padding-top: 4rem;
+} */
+
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: coral;
+}
+
+h2 {
+	font-family: Inconsolata, monospace;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	width: 515px;
+	height: 168px;
+}
+
+.char {
+	// --i: calc(50% / var(--char-total));
+	--offset: calc(var(--char-index) * 2rem);
+	offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+	offset-distance: var(--offset);
+	position: absolute;
+	animation: move 1500ms infinite alternate forwards var(--delay, 0ms);
+}
+
+h2 {
+	&:nth-child(2) {
+		color: aquamarine;
+		
+		.char {
+			--delay: calc(var(--char-index) * 30ms);
+		}
+	}
+}
+
+@keyframes move {
+	100% {
+		// --i: 2rem;
+		offset-distance: calc(var(--offset) + 12rem);
+	}
+}
+
+
+
+/* new css for center text via flexbox and codepen as of 3:37 12/19 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+h3 {
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+h6 {
+  font-size: 22px;
+}
+
+.banner h1,
+.banner h3,
+.banner h6 {
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.banner {
+  color: white;
+  background: image("Italy 049.jpg")
+    top left/cover no-repeat;
+  height: 300px;
+}
+
+.banner-text {
+  padding-top: 60px;
+}
+/* eof */
+
+<img
+class="card-img-top"
+src="Italy 049.jpg"
+alt="Trip to Italy"
+/>
+
+
+
+/* next drop shadow */
+
+/* @import 'https://fonts.googleapis.com/css?family=Homemade+Apple';
+
+body {
+  background: rgb(245, 245, 245);
+}
+
+.container {
+  /*centers in the container*/
+  text-align: center;
+  height: 20px;
+  width: 20px;
+}
+
+div.circTxt {
+  /*allows for centering*/
+  display: inline-block;
+  /*adjust as needed*/
+  margin-bottom: 128px;
+  color: #333;
+  position: relative;
+}
+
+#shadow {
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 4px 8px #666, 0 6px 16px #999;
+}
+
+#cursive {
+  font-family: homemade apple, cursive;
+  top: 32px;
+  left: -150px;
+}
+
+#blue {
+  color: blue;
+  font-family: tahoma;
+  font-weight: bold;
+  top: 50px;
+  left: 150px;
+}
+#blue p {
+  border: 1px solid blue;
+}
+
+#green {
+  color: lime;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black;
+  top: 40px;
+  left: -150px;
+}
+
+#spokes {
+  top: -64px;
+  left: 118px;
+}
+#spokes p {
+  border: 1px solid red;
+}
